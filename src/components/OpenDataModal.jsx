@@ -21,7 +21,7 @@ const OpenDataModal = ({ onClose }) => {
     const [tab, setTab] = useState('today');
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center mb-72">
+        <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center mb-32">
             <div className="bg-white p-6 rounded-2xl shadow-lg w-[90%] max-w-4xl relative">
                 <button className="absolute top-3 right-4 text-gray-500" onClick={onClose}>✖</button>
                 <div className="flex gap-4 mb-6">
