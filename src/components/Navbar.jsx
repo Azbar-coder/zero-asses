@@ -49,27 +49,31 @@ const Navbar = () => {
     return (
         <nav className='fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-4xl shadow-lg z-50 rounded-xl bg-[#00A693]'>
             <div className='container px-4 flex justify-between items-center h-16'>
-                <div className='flex justify-center'>     
-                    <img src={logo} alt="" height={28} width={40}/>
+                <div className='flex justify-center'>
+                    <img src={logo} alt="" height={28} width={40} />
                     <h3 className='text-2xl font-bold text-[#000000]'>Ride</h3>
                 </div>
 
                 {/* Desktop Nav */}
                 <div className='hidden md:flex space-x-5 text-sm font-bold items-center '>
                     <button onClick={() => handleScrollOrRedirect('hero-section')} className=' text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
-                   focus:outline-none  focus:ring-[#FFB400] 
+                   focus:outline-none 
                    transition-all duration-300'>Home</button>
 
                     <button onClick={() => handleScrollOrRedirect('about-section')} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
-                   focus:outline-none focus:ring-2 focus:ring-[#FFB400] 
+                   focus:outline-none 
                    transition-all duration-300'>Why ZeroRide?</button>
 
                     <button onClick={handleScrollToSolutions} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
-                   focus:outline-none focus:ring-2 focus:ring-[#FFB400] 
+                   focus:outline-none 
                    transition-all duration-300'>Solutions</button>
+                    <button onClick={() => handleScrollOrRedirect('stats-section')} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
+                   focus:outline-none 
+                   transition-all duration-300'>Stats</button>
                     <button onClick={() => handleScrollOrRedirect('faq-section')} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
-                   focus:outline-none focus:ring-2 focus:ring-[#FFB400] 
+                   focus:outline-none 
                    transition-all duration-300'>FAQs</button>
+
                     <button onClick={() => {
                         const section = document.getElementById('contact-section');
                         if (location.pathname === '/') {
@@ -81,7 +85,7 @@ const Navbar = () => {
                             }, 300);
                         }
                     }} className="text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
-                   focus:outline-none focus:ring-2 focus:ring-[#FFB400] 
+                   focus:outline-none 
                    transition-all duration-300">Support</button>
                 </div>
 
@@ -97,23 +101,26 @@ const Navbar = () => {
             {isOpen && (
                 <div className='md:hidden flex flex-col items-center space-y-4 py-4'>
                     <button onClick={() => handleScrollOrRedirect('hero-section')} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
-                   focus:outline-none focus:ring-2 focus:ring-[#FFB400] 
+                   focus:outline-none 
                    transition-all duration-300'>Home</button>
 
                     <button onClick={() => handleScrollOrRedirect('about-section')} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
-                   focus:outline-none focus:ring-2 focus:ring-[#FFB400] 
+                   focus:outline-none 
                    transition-all duration-300'>Why ZeroRide?</button>
 
-                    <button onClick={() => navigate('/solutions')} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
-                   focus:outline-none focus:ring-2 focus:ring-[#FFB400] 
+                    <button onClick={handleScrollToSolutions} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
+                   focus:outline-none 
                    transition-all duration-300'>Solutions</button>
 
                     <button onClick={() => handleScrollOrRedirect('faq-section')} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
-                   focus:outline-none focus:ring-2 focus:ring-[#FFB400] 
+                   focus:outline-none 
                    transition-all duration-300'>FAQs</button>
+                    <button onClick={() => handleScrollOrRedirect('stats-section')} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
+                   focus:outline-none 
+                   transition-all duration-300'>Stats</button>
 
                     <button onClick={() => handleScrollOrRedirect('contact-section')} className='text-white px-5 py-2 rounded-md hover:bg-[#FFB400] 
-                   focus:outline-none focus:ring-2 focus:ring-[#FFB400] 
+                   focus:outline-none  
                    transition-all duration-300'>Support</button>
                 </div>
             )}

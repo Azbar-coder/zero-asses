@@ -6,12 +6,13 @@ import FAQ from '../components/FAQ';
 import ViewSoution from '../components/ViewSoution';
 import Footer from '../components/Footer';
 import leftVectorImg from '../assets/1.png';
+import StatsSection from '../components/StatsSection';
 function Home() {
 
     return (
         <div>
             {/* Hero Section */}
-            <div className='relative h-[130vh] flex items-start justify-center pt-32 md:pt-40 bg-[#F5F0EC] text-center text-[#444444]' id="hero-section" >
+            <div className='relative h-[125vh] flex items-start justify-center pt-32 md:pt-40 bg-[#F5F0EC] text-center text-[#444444]' id="hero-section" >
 
                 <img
                     src={leftVectorImg}
@@ -39,6 +40,10 @@ function Home() {
             {/* Explore Solution */}
             <section id="solutions" className='pt-32 bg-[#F1EDFD]  pb-20'>
                 <ViewSoution />
+            </section>
+
+            <section id="stats-section" className='pt-32 bg-[#E6F9F6] text-white pb-20'>
+                <StatsSection />
             </section>
 
 
